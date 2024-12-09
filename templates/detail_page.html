@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section id="petition-detail">
+    <h1>{{ petition.title }}</h1>
+    <p>{{ petition.description }}</p>
+    <p>현재 서명 수: {{ petition.current_signatures }} / 목표 서명 수: {{ petition.target_signatures }}</p>
+    <button onclick="showCanvas()">서명하기</button>
+</section>
+
+<section id="signature-canvas" style="display: none;">
+    <h3>서명에 참여해 주세요!</h3>
+    <canvas id="canvas" width="400" height="200" style="border: 1px solid black;"></canvas>
+    <button onclick="saveSignature()">서명 저장</button>
+</section>
+
+<script src="{% static 'js/canvas.js' %}"></script>
+{% endblock %}

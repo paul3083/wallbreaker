@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}메인 페이지{% endblock %}
+
+{% block content %}
+<section id="hot-issues">
+    <h2>#요즘 핫 이슈</h2>
+    <div class="petition-list">
+        {% for petition in hot_issues %}
+            <div class="petition" onclick="location.href='{% url 'detail_page' petition.id %}'">
+                <h3>{{ petition.title }}</h3>
+                <p>{{ petition.description }}</p>
+                <p>{{ petition.current_signatures }}명 서명</p>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section id="nearby-petitions">
+    <h2>#내 주변 서명</h2>
+    <div class="petition-list">
+        {% for petition in nearby_petitions %}
+            <div class="petition" onclick="location.href='{% url 'detail_page' petition.id %}'">
+                <h3>{{ petition.title }}</h3>
+                <p>{{ petition.description }}</p>
+                <p>{{ petition.current_signatures }}명 서명</p>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
