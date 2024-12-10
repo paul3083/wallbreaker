@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    padding: 0px 24px;
+    background: #FDFEFF;
+    gap: 8px;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #FDFEFF;
+    padding: 0 36px;
+}
+
+.petition {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.petition-list {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 24px;
+    width: 247px;
+}
+
+.petition:hover {
+    background-color: #f9f9f9;
+}
+
+.headerTitle {
+    color: #14171A;
+    font-family: FormulaSans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: -0.24px;
+}
+
+.sectionTitle {
+    color: #14171A;
+    font-family: FormulaSans;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: -0.65px;
+}
+
+.box {
+    width: 247px;
+    height: 140px;
+    border-radius: 8px;
+    background: #F0F4F7;
+}
+
+.petitionBox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.population {
+    color: #2974FF;
+    font-family: FormulaSans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: -0.24px;
+}
+
+.title {
+    color: #14171A;
+    font-family: FormulaSans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.091px;
+}
+
+.intro {
+    color: #71797F;
+    font-family: FormulaSans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.203px;
+}
+
+.spacer {
+    width: 100%;
+    height: 32px;
+}

@@ -4,26 +4,32 @@
 
 {% block content %}
 <section id="hot-issues">
-    <h2>#요즘 핫 이슈</h2>
+    <span class="sectionTitle">#요즘 핫 이슈</span>
     <div class="petition-list">
         {% for petition in hot_issues %}
             <div class="petition" onclick="location.href='{% url 'detail_page' petition.id %}'">
-                <h3>{{ petition.title }}</h3>
-                <p>{{ petition.description }}</p>
-                <p>{{ petition.current_signatures }}명 서명</p>
+                <div class="box"></div>
+                <div class="petitionBox">
+                    <span class="population">{{ petition.current_signatures }}명 달성!</span>
+                    <span class="title">{{ petition.title }}</span>
+                    <span class="intro">{{ petition.description }}</span>
+                </div>
             </div>
         {% endfor %}
     </div>
 </section>
-
-<section id="nearby-petitions">
-    <h2>#내 주변 서명</h2>
+<div class="spacer"></div>
+<section id="hot-issues">
+    <span class="sectionTitle">#내 주변 서명</span>
     <div class="petition-list">
-        {% for petition in nearby_petitions %}
+        {% for petition in hot_issues %}
             <div class="petition" onclick="location.href='{% url 'detail_page' petition.id %}'">
-                <h3>{{ petition.title }}</h3>
-                <p>{{ petition.description }}</p>
-                <p>{{ petition.current_signatures }}명 서명</p>
+                <div class="box"></div>
+                <div class="petitionBox">
+                    <span class="population">{{ petition.current_signatures }}명 달성!</span>
+                    <span class="title">{{ petition.title }}</span>
+                    <span class="intro">{{ petition.description }}</span>
+                </div>
             </div>
         {% endfor %}
     </div>
